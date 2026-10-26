@@ -1,0 +1,73 @@
+{
+  "Popularity": {
+    "params": {
+      "window_days": 30
+    },
+    "ndcg@10": 0.042549548694281965,
+    "recall@10": 0.07608205749564995
+  },
+  "ItemKNN": {
+    "params": {
+      "k": 150,
+      "shrinkage": 10,
+      "signal": "observed"
+    },
+    "ndcg@10": 0.041479409294094896,
+    "recall@10": 0.06552608809934528
+  },
+  "EASE": {
+    "params": {
+      "l2": 100,
+      "signal": "observed"
+    },
+    "ndcg@10": 0.047344918377516074,
+    "recall@10": 0.07769758538088921
+  },
+  "IALS": {
+    "params": {
+      "n_factors": 64,
+      "alpha": 160,
+      "l2": 1000,
+      "n_iters": 20
+    },
+    "ndcg@10": 0.042530515338658,
+    "recall@10": 0.06204640497835172
+  },
+  "FM": {
+    "params": {
+      "factors": 128,
+      "item_features": "age",
+      "weight_decay": 1e-06,
+      "learning_rate": 0.01,
+      "negative_ratio": 3,
+      "batch_size": 4096,
+      "num_threads": 4,
+      "epochs": 25
+    },
+    "ndcg@10": 0.04936801198002196,
+    "recall@10": 0.0780712764694184
+  },
+  "CustomALS": {
+    "params": {
+      "n_factors": 128,
+      "alpha": 160,
+      "l2": 300,
+      "n_iters": 20,
+      "half_life_days": 90,
+      "recency_mix": 0.5
+    },
+    "ndcg@10": 0.04892345598609536,
+    "recall@10": 0.0774980564596507
+  },
+  "Fusion": {
+    "params": {
+      "models": [
+        "FM",
+        "CustomALS"
+      ],
+      "weight": 0.7
+    },
+    "ndcg@10": 0.06424122682884051,
+    "recall@10": 0.104744744761075
+  }
+}

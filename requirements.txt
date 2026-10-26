@@ -1,0 +1,10 @@
+# Python 3.13; tested on macOS arm64, CPU.
+numpy==2.4.3
+scipy==1.18.1
+pandas==3.0.2
+torch==2.14.1
+matplotlib==3.10.8
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.2.0
+threadpoolctl==3.7.0

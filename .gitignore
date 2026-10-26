@@ -1,0 +1,27 @@
+.venv/
+.conda/
+.cache/
+data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+*.pt
+*.pth
+*.pkl
+*.npz
+*.npy
+*.parquet
+*.csv.part
+results/*.log
+
+# Local development and review materials
+EXPERIMENT_PLAN.md
+REVIEW_RESPONSE.md
+SOURCE_AUDIT.md
+description.md
+requirements-lock.txt
+pytest.ini
+tests/
+scripts/
